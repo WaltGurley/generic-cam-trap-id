@@ -9,7 +9,7 @@
           v-show="scoreIsVisible"
         >
           <!-- <PandaIcon class="panda-icon"/> -->
-          <img src="./assets/WildAboutCats2019Logo_small.png" alt="Wild About Cats Logo" class="wild-about-cats-logo">
+          <img src="./assets/genericLogo.png" alt="Generic Logo" class="logo-img">
           <h2 class="app-hud-text">Score:
             <span class="score bolded">{{ score }}</span>
           </h2>
@@ -26,7 +26,7 @@
         v-bind:cardsPerRound="cardsPerRound"
       />
       <GameCard 
-        v-for="image in imageData"
+        v-for="image in eMammalImageData"
         v-bind:key="image.id"
         v-bind:cardData="image"
         v-bind:currentCardID="currentCard"
@@ -42,7 +42,7 @@
         v-bind:zooming="zooming"
       />
       <EndCard
-        v-bind:userData="imageData"
+        v-bind:userData="eMammalImageData"
         v-bind:totalNumberCards="cardsPerRound"
         v-bind:showEndCard="endRound"
       />
@@ -108,7 +108,7 @@ import filter from 'lodash/filter'
 import uniqBy from 'lodash/uniqBy'
 
 // Load in the image data from the csv file
-import fullImgData from './assets/imageData.csv'
+import fullImgData from './assets/eMammalImageData.csv'
 import referenceImgData from './assets/referenceImageData.csv'
 
 // import Zooming for image zoom and anime for animations
@@ -126,7 +126,7 @@ export default {
   },
   data () {
     return {
-      imageData: [],
+      eMammalImageData: [],
       referenceCardData: [],
       uniqueAnimalNames: [],
       cardsPerRound: 5,
@@ -145,7 +145,7 @@ export default {
     }
   },
   methods: {
-    // This function reads and parses the image data from the file 'imageData.csv' located in the 'src' folder and creates an 'img' element using the provided URL. It also creates an array of unique animal names.
+    // This function reads and parses the image data from the file 'eMammalImageData.csv' located in the 'src' folder and creates an 'img' element using the provided URL. It also creates an array of unique animal names.
     getImageDataOnLoad: function () {
       let animalNames = []
       
@@ -194,13 +194,13 @@ export default {
       }
 
       // Set the image data that will populate the cards in a round
-      this.imageData = sampleSize(uniqueAnimalsNotIdentified,
+      this.eMammalImageData = sampleSize(uniqueAnimalsNotIdentified,
         this.cardsPerRound
       )
 
       const numberOfChoices = 3
       const uniqueNames = this.uniqueAnimalNames
-      this.imageData.forEach(function (data, i) {
+      this.eMammalImageData.forEach(function (data, i) {
         // Set unique id for reference later
         data.id = i + 1
         // Shuffle image animal name and selection of two other unique animal names to create choices
@@ -256,8 +256,8 @@ export default {
     },
     // This function keeps track of the score after the user submits an answer. It also shows the 'next button' to select a new card.
     trackScore: function (isCorrect, correctAnimalName) {
-      this.imageData[this.currentCard - 1].identified = isCorrect
-      this.score = this.imageData.filter(d => d.identified).length
+      this.eMammalImageData[this.currentCard - 1].identified = isCorrect
+      this.score = this.eMammalImageData.filter(d => d.identified).length
       this.nextButtonIsVisible = true
 
       // If the user's choice is incorrect show the reference image
@@ -388,7 +388,6 @@ $light-brown: #f7d98f;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
   height: 100%;
-  background-image: url('./assets/background.jpg');
   background-position: center;
   color: $dark-brown;
   background-color: #f8efe1;
@@ -487,7 +486,7 @@ $light-brown: #f7d98f;
     align-items: center;
     flex-direction: column;
 
-    .wild-about-cats-logo {
+    .logo-img {
       width: 250px;
       margin-bottom: 25px;
     }

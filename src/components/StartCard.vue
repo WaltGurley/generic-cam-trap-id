@@ -8,13 +8,13 @@
       v-bind:class="{ flipped: isFlipped }"
     >
       <div class="card-side front">
-        <img src="../assets/WildAboutCats2019Logo_small.png" alt="Wild About Cats Logo" class="wild-about-cats-logo">
+        <img src="../assets/genericLogo.png" alt="Generic Logo" class="logo-img">
         <div class="text-group">
           <p class="card-subheader bolded">
-            Do you know your cats?
+            Do you know your animals?
           </p>
           <p class="card-paragraph">
-            See if you can identify a variety of cats from around the world in this collection of camera trap pictures from the eMammal research archive.
+            See if you can identify a variety of animals from around the world in this collection of camera trap pictures from the eMammal research archive.
           </p>
         </div>
         <button
@@ -28,10 +28,10 @@
         <div class="text-group">
           <h1 class="card-header">How to play</h1>
           <p class="card-paragraph">
-            Each card shows a picture of a cat in the wild taken with a camera trap.
+            Each card shows a picture of an animal in the wild taken with a camera trap.
           </p>
           <p class="card-paragraph">
-            Select the correct name of the cat in the picture from the three choices.
+            Select the correct name of the animal in the picture from the three choices.
           </p>
           <p class="card-paragraph">
             There are five pictures in a round. Can you identify all five? Keep track of your score!
@@ -126,7 +126,7 @@ $light-brown: #f7d98f;
       margin-bottom: 2.4rem;
     }
 
-    .wild-about-cats-logo {
+    .logo-img {
       margin-top: 3rem;
       width: 375px;
     }

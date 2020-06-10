@@ -3,7 +3,7 @@
     v-bind:class="[slideType]"
   >
     <div class="card-side front">
-      <img src="../assets/WildAboutCats2019Logo_small.png" alt="Wild About Cats Logo" class="wild-about-cats-logo">
+      <img src="../assets/genericLogo.png" alt="Generic Logo" class="logo-img">
       <div class="text-group">
         <h1 class="card-header">{{ endtext[correctAnswers].greet }}</h1>
         <p class="card-subheader">
@@ -38,19 +38,19 @@ export default {
         },
         {
           greet: 'Good job!',
-          say: 'Some of these cats are tricky to identify'
+          say: 'Some of these animals are tricky to identify'
         },
         {
           greet: 'Not bad!',
-          say: 'These are some unusual cats'
+          say: 'These are some unusual animals'
         },
         {
           greet: 'Well done!',
-          say: `You've got an eye for cats!`
+          say: `You've got an eye for animals!`
         },
         {
           greet: 'Congratulations!',
-          say: `You're a cat identification expert!`
+          say: `You're a animal identification expert!`
         }
       ]
     }
@@ -116,7 +116,7 @@ $light-brown: #f7d98f;
       margin-top: 0;
     }
 
-    .wild-about-cats-logo {
+    .logo-img {
       margin-top: 3rem;
       width: 375px;
     }

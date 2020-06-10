@@ -4,7 +4,7 @@
   >
   <div class="card">
     <div class="card-side">
-        <h1 class="card-header">Wild About Cats</h1>
+        <h1 class="card-header">[TITLE OF APP]</h1>
         <p class="card-paragraph">The pictures in this game are collected from eMammal (emammal.si.edu), a data management system and archive for camera trap research projects, and are provided under an Attribution-NonCommercial-ShareAlike 4.0 International Creative Commons license.</p>
         <p class="card-paragraph">For more information about eMammal and the camera trap projects identified in this game, please visit emammal.si.edu/about and emammal.si.edu/projects.</p>
         <button

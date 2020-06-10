@@ -22,7 +22,7 @@
           <TouchIcon/>
         </aside>
         <div class="card-choices">
-          <h2 class="card-header question">Can you identify this cat?</h2>
+          <h2 class="card-header question">Can you identify this animal?</h2>
           <div class="card-buttons">
             <button
               v-for="(name, i) in cardData.choices"
