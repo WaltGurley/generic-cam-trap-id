@@ -16,6 +16,9 @@
           <p class="card-paragraph">
             See if you can identify a variety of animals from around the world in this collection of camera trap pictures from the eMammal research archive.
           </p>
+          <p class="card-paragraph">
+            <em>This application displays best on a 1920x1080 pixel sized screen.</em>
+          </p>
         </div>
         <button
           v-on:click="flip"
