@@ -1,6 +1,6 @@
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production'
-    ? '/generic-cam-trap-idx/'
+    ? '/generic-cam-trap-id/'
     : '/',
   chainWebpack: config => {
     // CSV loader
