@@ -1,6 +1,6 @@
 # generic-cam-trap-id
 
-This repository contains the development files for a generic camera trap animal identification game application. **This application is not responsive to screen size and will only display properly on a 1920x1080 pixel sized screen.**
+This repository contains the development files for a generic camera trap animal identification game application. **This application is not responsive to screen size and displays best on a 1920x1080 pixel sized screen.**
 
 ## About these files
 
